@@ -1,11 +1,12 @@
 body {
-  box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     font-family: sans-serif;
     padding: 90px 20px 0;
-    background-color: whitesmoke;;
+    background-color: whitesmoke;
 }
-header {
+
+.header {
     position: fixed;
     background-color: #076AF0;
     top: 0;
@@ -13,6 +14,50 @@ header {
     height: 90px;
     width: 100%;
 }
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    padding: 0 auto;
+
+}
+
+.nav-menu {
+    display: flex;
+    padding: 0 40px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 90px;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    transition: 0.5s;
+}
+
+.nav-menu-link:hover {
+   background-color: #024070;
+   border-radius: 10px;   
+}
+
 aside {
     position: fixed;
     background-color: bisque;
@@ -21,6 +66,7 @@ aside {
     bottom: 20px;
     width: 20%;
 }
+
 section {
     overflow-y: scroll;
     position: fixed;
@@ -30,6 +76,7 @@ section {
     bottom: 20px;
     width: 80%;
 }
+
 footer {
     position: fixed;
     background-color: black;
@@ -40,18 +87,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
-p{
-    color:blue;
-}
-nav a{
-    background-color: black;
-    color: yellow;
-    text-decoration: none;
-}
-nav a:hover{
-    background-color: red;
-    color: yellow;
-}
+
 tbody tr:nth-child(odd){
     background-color: #0b857c;
     color: black;
@@ -61,11 +97,11 @@ tbody tr:nth-child(even){
     background-color: #997d12;
     color: black;
 }
+
 thead tr {
     background-color: black;
     color: white;
 }
-
 
 .aviso {
     color: red;
