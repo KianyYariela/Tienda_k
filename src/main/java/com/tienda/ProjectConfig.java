@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.tienda;
 
 import java.util.Locale;
@@ -17,7 +13,8 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @Configuration       
 public class ProjectConfig implements WebMvcConfigurer {
-   // Los siguientes métodos son utilizados para el tema de internacionalización.
+    // Los siguientes métodos son utilizados para el tema de internacionalización.
+
     //LocaleResolver se utiliza ára gestionar la configuracion del idioma segun la ubicacion del usuario.
     //@Bean se utiliza para crear un mantener una solsa copia de un objeto en memoria y sin necesidad de hacer un new...
     
@@ -43,17 +40,15 @@ public class ProjectConfig implements WebMvcConfigurer {
              InterceptorRegistry registro){
          registro.addInterceptor(
                  localeChangeInterceptor()
-         );
-         
+         );  
      }
      
      @Bean("messageSource")
-    public MessageSource messageSource(){
-        ResourceBundleMessageSource
-                bundleMessageSource =
-                new ResourceBundleMessageSource();
-         bundleMessageSource.setBasename("messages");
-          bundleMessageSource.setDefaultEncoding("UTF-8");
-          return bundleMessageSource;
+    public MessageSource messageSource() {
+        ResourceBundleMessageSource bundleMessageSource
+                = new ResourceBundleMessageSource();
+        bundleMessageSource.setBasename("message");
+        bundleMessageSource.setDefaultEncoding("UTF-8");
+        return bundleMessageSource;
     }
 }
