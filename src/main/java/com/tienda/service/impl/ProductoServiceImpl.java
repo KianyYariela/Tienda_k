@@ -33,14 +33,22 @@ public class ProductoServiceImpl
         }
 
     @Override
+    @Transactional
     public void delete(Producto producto) {
         productoDao.delete(producto);
     }
 
     @Override
+    @Transactional
     public void save(Producto producto) {
         productoDao.save(producto);
     }
     
+    //Una consulta tipo Query
+    @Override
+    @Transactional(readOnly=true)
+    public List<Producto> consultaQuery(double precioInf,double precioSup){
+        return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
     
 }

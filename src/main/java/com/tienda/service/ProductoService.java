@@ -21,6 +21,8 @@ public interface ProductoService {
     //Se crea un registro en la tabla producto
     public void save(Producto producto);
     
+    //Una consulta tipo Query
+    public List<Producto> consultaQuery(double precioInf,double precioSup);
     
     
     
