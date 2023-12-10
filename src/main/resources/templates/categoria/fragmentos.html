@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="~{layout/plantilla :: head}">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+      <head th:replace="~{layout/plantilla ::head}">
         <title>TechShop</title>
     </head>
     <body>
@@ -10,7 +10,7 @@
         <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">   
+                    <div class="col-md-3"sec:authorize="hasRole('ROLE_ADMIN')">   
                         <button 
                             type="button" 
                             class="btn btn-primary btn-block" 
